@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JWTAuth.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220529220252_initilMigration")]
-    partial class initilMigration
+    [Migration("20220606195000_FirstMigration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

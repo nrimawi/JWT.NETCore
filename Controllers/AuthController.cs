@@ -81,7 +81,7 @@ namespace JWTAuth.Controllers
 
             var result = await _userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User creation failed" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User creation failed"+result.ToString() });
 
 
             if (!await _roleManager.RoleExistsAsync(UserRoles.Admin))
